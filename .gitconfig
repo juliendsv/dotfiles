@@ -1,0 +1,22 @@
+
+[hub]
+protocol = https
+
+[user]
+	name = juliendsv
+	email = julien.dasilva@gmail.com
+
+[color]
+ui = true
+
+[alias]
+co = checkout
+sub = submodule update --init --recursive
+st = status
+ci = commit
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
