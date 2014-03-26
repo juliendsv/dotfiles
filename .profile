@@ -13,3 +13,4 @@ PS1="\[\033[1;32m\]juliendsv \[\033[1;30m\]:\w\[\033[1;34m\]\$(parse_git_branch)
 
 ulimit -n 1024
 
+alias timestamp="date +%s"
