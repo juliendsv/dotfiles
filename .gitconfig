@@ -1,22 +1,21 @@
-
 [hub]
-protocol = https
-
+    protocol = https
+[credential]
+	helper = /opt/boxen/bin/boxen-git-credential
+[core]
+	excludesfile = /opt/boxen/config/git/gitignore
 [user]
 	name = juliendsv
 	email = julien.dasilva@gmail.com
-
 [color]
-ui = true
-
+    ui = true
+[github]
+    user = juliendsv
 [alias]
-co = checkout
-sub = submodule update --init --recursive
-st = status
-ci = commit
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+    co = checkout
+    sub = submodule update --init --recursive
+    st = status
+    ci = commit
+    s = stash save -u
+    sp = stash pop
+    ss = stash show -v
