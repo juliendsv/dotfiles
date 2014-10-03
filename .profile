@@ -5,6 +5,9 @@ fi
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
+# Add timestamp to history
+export HISTTIMEFORMAT="%F %T  "
+
 function parse_git_branch {
  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1]/'
 }
