@@ -12,10 +12,6 @@ function parse_git_branch {
  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1]/'
 }
 
-# solarize light
-# PS1="\[\033[1;32m\]juliendsv \[\033[1;30m\]:\w\[\033[1;34m\]\$(parse_git_branch)\[\033[00m\] "
-
-# pro
 PS1="\[\033[1;35m\]juliendsv \[\033[1;33m\]:\w\[\033[1;34m\]\$(parse_git_branch)\[\033[00m\] "
 
 ulimit -n 1024
@@ -29,3 +25,9 @@ alias pubkey="cat ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pas
 alias gs="git status --short"
 alias gpo="git pull origin"
 alias gl="git pretty-log"
+
+# Load private configs (out of the public repo)
+if [[ -a ~/.env-vars ]]
+then
+  source ~/.env-vars
+fi
