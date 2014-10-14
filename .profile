@@ -31,3 +31,9 @@ if [[ -a ~/.env-vars ]]
 then
   source ~/.env-vars
 fi
+
+# Shortcut for go repo
+if [[ "$GOPATH" ]];
+then
+    alias cdgo="cd $GOPATH/src/github.com/$USER"
+fi
