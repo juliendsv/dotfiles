@@ -25,6 +25,7 @@ alias pubkey="cat ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pas
 alias gs="git status --short"
 alias gpo="git pull origin"
 alias gl="git pretty-log"
+alias git-delete="git push origin --delete"
 
 # Load private configs (out of the public repo)
 if [[ -a ~/.env-vars ]]
