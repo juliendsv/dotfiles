@@ -6,6 +6,7 @@ export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
 # Add timestamp to history
+HISTFILESIZE=10000000
 export HISTTIMEFORMAT="%F %T  "
 
 function parse_git_branch {
