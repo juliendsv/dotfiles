@@ -84,6 +84,14 @@ var appsOperationsByScreenCount = {
             operations.pad(windowMargin, windowMargin / 2, windowMargin, windowMargin)
         ]
     },
+    'Safari': {
+        1: operations.maximize(),
+        2: [
+            slate.operation('throw', {screen: screens.thunderbolt}),
+            operations.moveToHalfLeftTop(),
+            operations.pad(windowMargin, windowMargin / 2, windowMargin, windowMargin)
+        ]
+    },    
     Terminal: {
         1: [
             operations.maximize(),
@@ -95,29 +103,18 @@ var appsOperationsByScreenCount = {
             operations.pad(windowMargin, windowMargin, windowMargin, windowMargin / 2)
         ]
     },
-    'Sublime Text 2': {
+    'iTerm': {
         1: [
             operations.maximize(),
             operations.pad(windowMargin, windowMargin, windowMargin, windowMargin),
         ],
         2: [
             slate.operation('throw', {screen: screens.thunderbolt}),
-            operations.moveToHalfRight(),
-            operations.pad(windowMargin, windowMargin, windowMargin, windowMargin / 2)
-        ]
-    },
-    'PyCharm': {
-        1: [
-            operations.maximize(),
-            operations.pad(windowMargin, windowMargin, windowMargin, windowMargin),
-        ],
-        2: [
-            slate.operation('throw', {screen: screens.thunderbolt}),
-            operations.moveToHalfRight(),
+            operations.moveToHalfLeftDown(),
             operations.pad(windowMargin, windowMargin, windowMargin, windowMargin / 2)
         ]
     },    
-    'NetBeans': {
+    'Sublime Text 2': {
         1: [
             operations.maximize(),
             operations.pad(windowMargin, windowMargin, windowMargin, windowMargin),
