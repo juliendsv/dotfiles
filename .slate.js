@@ -1,5 +1,7 @@
 slate.log('Loading config')
 
+config defaultToCurrentScreen true
+
 var getKeystroke = function(key) {
     return key + ':ctrl,shift'
 }
@@ -91,17 +93,6 @@ var appsOperationsByScreenCount = {
             operations.moveToHalfLeftTop(),
             operations.pad(windowMargin, windowMargin / 2, windowMargin, windowMargin)
         ]
-    },    
-    Terminal: {
-        1: [
-            operations.maximize(),
-            operations.pad(windowMargin, windowMargin, windowMargin, windowMargin),
-        ],
-        2: [
-            slate.operation('throw', {screen: screens.thunderbolt}),
-            operations.moveToHalfLeftDown(),
-            operations.pad(windowMargin, windowMargin, windowMargin, windowMargin / 2)
-        ]
     },
     'iTerm': {
         1: [
@@ -114,7 +105,7 @@ var appsOperationsByScreenCount = {
             operations.pad(windowMargin, windowMargin, windowMargin, windowMargin / 2)
         ]
     },    
-    'Sublime Text 2': {
+    'Sublime Text': {
         1: [
             operations.maximize(),
             operations.pad(windowMargin, windowMargin, windowMargin, windowMargin),
