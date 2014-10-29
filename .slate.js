@@ -1,7 +1,5 @@
 slate.log('Loading config')
 
-config defaultToCurrentScreen true
-
 var getKeystroke = function(key) {
     return key + ':ctrl,shift'
 }
@@ -47,10 +45,36 @@ operations.moveToHalfLeftDown = function() {
     })
 }
 
+operations.moveToHalfRightTop = function() {
+    return slate.operation('move', {
+        x: 'screenOriginX + screenSizeX / 2',
+        y: 'screenOriginY',
+        width: 'screenSizeX / 2 - 10',
+        height: 'screenSizeY / 1.6'
+    })
+}
+
+operations.moveToHalfRightDown = function() {
+    return slate.operation('move', {
+        x: 'screenOriginX + screenSizeX / 2 +6',
+        y: 'screenSizeY / 1.6 + 20',
+        width: 'screenSizeX / 2 - 10',
+        height: '520'
+    })
+}
 
 operations.moveToHalfRight = function() {
     return slate.operation('move', {
         x: 'screenOriginX + screenSizeX / 2',
+        y: 'screenOriginY', 
+        width: 'screenSizeX / 2',
+        height: 'screenSizeY'
+    })
+}
+
+operations.moveToHalfLeft = function() {
+    return slate.operation('move', {
+        x: 'screenOriginX',
         y: 'screenOriginY', 
         width: 'screenSizeX / 2',
         height: 'screenSizeY'
@@ -82,7 +106,7 @@ var appsOperationsByScreenCount = {
         1: operations.maximize(),
         2: [
             slate.operation('throw', {screen: screens.thunderbolt}),
-            operations.moveToHalfLeftTop(),
+            operations.moveToHalfRightTop(),
             operations.pad(windowMargin, windowMargin / 2, windowMargin, windowMargin)
         ]
     },
@@ -93,7 +117,7 @@ var appsOperationsByScreenCount = {
             operations.moveToHalfLeftTop(),
             operations.pad(windowMargin, windowMargin / 2, windowMargin, windowMargin)
         ]
-    },
+    },    
     'iTerm': {
         1: [
             operations.maximize(),
@@ -101,7 +125,7 @@ var appsOperationsByScreenCount = {
         ],
         2: [
             slate.operation('throw', {screen: screens.thunderbolt}),
-            operations.moveToHalfLeftDown(),
+            operations.moveToHalfRightDown(),
             operations.pad(windowMargin, windowMargin, windowMargin, windowMargin / 2)
         ]
     },    
@@ -112,7 +136,7 @@ var appsOperationsByScreenCount = {
         ],
         2: [
             slate.operation('throw', {screen: screens.thunderbolt}),
-            operations.moveToHalfRight(),
+            operations.moveToHalfLeft(),
             operations.pad(windowMargin, windowMargin, windowMargin, windowMargin / 2)
         ]
     },
