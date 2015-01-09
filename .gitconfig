@@ -1,16 +1,39 @@
 [hub]
     protocol = https
+
 [credential]
 	helper = /opt/boxen/bin/boxen-git-credential
+
 [core]
 	excludesfile = /opt/boxen/config/git/gitignore
+
 [user]
 	name = juliendsv
 	email = julien.dasilva@gmail.com
+
 [color]
-    ui = true
+    ui = auto
+
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+
+[color "diff"]
+    meta = blue bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+    whitespace = red reverse
+
+[color "status"]
+    added = green
+    changed = red
+    untracked = cyan
+
 [github]
     user = juliendsv
+
 [alias]
     co = checkout
     sub = submodule update --init --recursive
@@ -20,3 +43,8 @@
     sp = stash pop
     ss = stash show -v
     pretty-log = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%Creset' --abbrev-commit
+
+[filter "media"]
+	clean = git media clean %f
+	smudge = git media smudge %f
+	required = true
