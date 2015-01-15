@@ -21,6 +21,7 @@ alias l="ls -l"
 alias la="ls -laF"
 alias timestamp="date +%s"
 alias pubkey="cat ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
+alias v="vagrant"
 
 # Git shortcuts
 alias gs="git status --short"
