@@ -48,3 +48,8 @@
 	clean = git media clean %f
 	smudge = git media smudge %f
 	required = true
+
+[help]
+
+    # Automatically correct and execute mistyped commands
+    autocorrect = 1
