@@ -11,6 +11,10 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 # Add timestamp to history
 HISTFILESIZE=10000000
 export HISTTIMEFORMAT="%F %T  "
+# Erase duplicates in history
+export HISTCONTROL=erasedups
+# Append to the history file when exiting instead of overwriting it
+shopt -s histappend
 
 function parse_git_branch {
  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1]/'
