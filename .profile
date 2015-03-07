@@ -36,6 +36,9 @@ alias gpo="git pull origin"
 alias gl="git pretty-log"
 alias git-delete="git push origin --delete"
 
+# List Go dependencies of a project excluding standard libs
+alias gdeps="go list -f '{{.Deps}}' | tr \"[\" \" \" | tr \"]\" \" \" | xargs go list -f '{{if not .Standard}}{{.ImportPath}}{{end}}'"
+
 # Load private configs (out of the public repo)
 if [[ -a ~/.env-vars ]]
 then
