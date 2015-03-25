@@ -34,8 +34,12 @@ alias v="vagrant"
 alias gs="git status --short"
 alias gpo="git pull origin"
 alias gl="git pretty-log"
+alias gup="git pull --rebase --prune $@ && git submodule update --init --recursive"
+alias gcob="git checkout -b"
 alias git-delete="git push origin --delete"
 alias git-prune="git remote prune origin"
+
+
 
 # List Go dependencies of a project excluding standard libs
 alias gdeps="go list -f '{{.Deps}}' | tr \"[\" \" \" | tr \"]\" \" \" | xargs go list -f '{{if not .Standard}}{{.ImportPath}}{{end}}'"
