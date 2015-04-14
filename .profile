@@ -55,3 +55,6 @@ if [[ "$GOPATH" ]];
 then
     alias cdgo="cd $GOPATH/src/github.com/$USER"
 fi
+
+# Docker
+eval "$(boot2docker shellinit)"
