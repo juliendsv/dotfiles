@@ -58,3 +58,4 @@ fi
 
 # Docker
 eval "$(boot2docker shellinit)"
+alias d="docker"
