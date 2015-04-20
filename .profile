@@ -57,5 +57,8 @@ then
 fi
 
 # Docker
-eval "$(boot2docker shellinit)"
+if [ "$(boot2docker status)" = "running" ] ; then
+    eval "$(boot2docker shellinit)"
+fi
+
 alias d="docker"
