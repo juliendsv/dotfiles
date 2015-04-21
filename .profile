@@ -62,3 +62,4 @@ if [ "$(boot2docker status)" = "running" ] ; then
 fi
 
 alias d="docker"
+alias dc="docker-compose"
