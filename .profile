@@ -39,8 +39,6 @@ alias gcob="git checkout -b"
 alias git-delete="git push origin --delete"
 alias git-prune="git remote prune origin"
 
-
-
 # List Go dependencies of a project excluding standard libs
 alias gdeps="go list -f '{{.Deps}}' | tr \"[\" \" \" | tr \"]\" \" \" | xargs go list -f '{{if not .Standard}}{{.ImportPath}}{{end}}'"
 
