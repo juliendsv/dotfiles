@@ -1,5 +1,6 @@
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
+export GOPATH="$HOME"
 
 if [[ `ssh-add -l` != *id_?sa* ]]; then 
     ssh-add ~/.ssh/id_rsa 
