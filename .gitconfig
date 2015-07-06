@@ -2,10 +2,11 @@
     protocol = https
 
 [credential]
-	helper = /opt/boxen/bin/boxen-git-credential
+	helper = /usr/local/bin/git-credential-osxkeychain
 
 [core]
-	excludesfile = /opt/boxen/config/git/gitignore
+	excludesfile = ~/.gitignore
+	editor = vim
 
 [user]
 	name = juliendsv
