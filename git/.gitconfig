@@ -2,7 +2,7 @@
     protocol = https
 
 [credential]
-	helper = /usr/local/bin/git-credential-osxkeychain
+	helper = #CREDENTIAL#
 
 [core]
 	excludesfile = ~/.gitignore
