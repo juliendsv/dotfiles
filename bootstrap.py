@@ -1,6 +1,6 @@
 #! /usr/bin/python
 
-import platform, os.path, shutil
+import platform, os.path, shutil, subprocess
 
 
 def swap_string_in_file(filename, old_string, new_string):
@@ -32,5 +32,15 @@ def setup_gitconfig():
 	elif platform.system() == "Linux":
 		swap_string_in_file("../.gitconfig", "#CREDENTIAL#", "cache")
 	
+def setup_vim():
+	if os.path.isdir("../.vim/") == False:
+		subprocess.call(['./vim/pathogen.sh'])
+
+	if os.path.isdir("../.vim/bundle/vim-colors-solarized") == False:
+		subprocess.call(['./vim/solarized.sh'])
+
+	shutil.copyfile("./vim/.vimrc", "../.vimrc")
+
 
 setup_gitconfig()
+setup_vim()
