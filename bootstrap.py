@@ -32,6 +32,7 @@ def setup_gitconfig():
 	elif platform.system() == "Linux":
 		swap_string_in_file("../.gitconfig", "#CREDENTIAL#", "cache")
 	
+
 def setup_vim():
 	if os.path.isdir("../.vim/") == False:
 		subprocess.call(['./vim/pathogen.sh'])
@@ -44,3 +45,4 @@ def setup_vim():
 
 setup_gitconfig()
 setup_vim()
+
