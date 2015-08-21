@@ -40,6 +40,9 @@ def setup_vim():
 	if os.path.isdir("../.vim/bundle/vim-colors-solarized") == False:
 		subprocess.call(['./vim/solarized.sh'])
 
+        if os.path.isdir("../.vim/bundle/vim-go") == False:
+                subprocess.call(['./vim/vim-go.sh'])
+
 	shutil.copyfile("./vim/.vimrc", "../.vimrc")
 
 
