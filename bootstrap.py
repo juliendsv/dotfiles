@@ -14,6 +14,13 @@ def swap_string_in_file(filename, old_string, new_string):
         else:
                 print '"{old_string}" found. What have you done!'.format(**locals())
 
+def install_packages():
+	if platform.system() not in ['Darwin', 'Linux']: 
+		print "What are you doing? don't work with your system ..."
+		return
+
+	if platform.system() == "Linux":
+        	subprocess.call(['./linux/apt.sh'])
 
 def setup_gitconfig():
 	if os.path.isfile("../.gitconfig"):
@@ -35,17 +42,19 @@ def setup_gitconfig():
 
 def setup_vim():
 	if os.path.isdir("../.vim/") == False:
-		subprocess.call(['./vim/pathogen.sh'])
+       		subprocess.call(['./vim/pathogen.sh'])
 
 	if os.path.isdir("../.vim/bundle/vim-colors-solarized") == False:
 		subprocess.call(['./vim/solarized.sh'])
 
         if os.path.isdir("../.vim/bundle/vim-go") == False:
-                subprocess.call(['./vim/vim-go.sh'])
+               subprocess.call(['./vim/vim-go.sh'])
+	       subprocess.call(['./vim/neocomplete.sh'])
 
 	shutil.copyfile("./vim/.vimrc", "../.vimrc")
 
 
+install_packages()
 setup_gitconfig()
 setup_vim()
 
