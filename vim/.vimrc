@@ -1,11 +1,16 @@
 execute pathogen#infect()
 syntax enable
-colorscheme solarized
-let g:solarized_termcolors=256
+
+"colorscheme solarized
+"let g:solarized_termcolors=256
+
+colorscheme molokai
+let g:molokai_original = 1
+let g:rehash256 = 1
 
 set number
 set ruler
-set background=dark
+"set background=dark
 
 let g:neocomplete#enable_at_startup = 1
 let g:go_disable_autoinstall = 0

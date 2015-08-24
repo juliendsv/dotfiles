@@ -45,7 +45,7 @@ def setup_vim():
        		subprocess.call(['./vim/pathogen.sh'])
 
 	if os.path.isdir("../.vim/bundle/vim-colors-solarized") == False:
-		subprocess.call(['./vim/solarized.sh'])
+		subprocess.call(['./vim/themes.sh'])
 
         if os.path.isdir("../.vim/bundle/vim-go") == False:
                subprocess.call(['./vim/vim-go.sh'])
