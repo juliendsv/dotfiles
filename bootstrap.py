@@ -48,8 +48,9 @@ def setup_vim():
 		subprocess.call(['./vim/themes.sh'])
 
         if os.path.isdir("../.vim/bundle/vim-go") == False:
-               subprocess.call(['./vim/vim-go.sh'])
-	       subprocess.call(['./vim/neocomplete.sh'])
+            subprocess.call(['./vim/vim-go.sh'])
+            subprocess.call(['./vim/neocomplete.sh'])
+            subprocess.call(['./vim/nerdtree.sh'])
 
 	shutil.copyfile("./vim/.vimrc", "../.vimrc")
 
