@@ -29,6 +29,12 @@ if [[ -a /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl ]]
 then
     alias subl3="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 fi
+
+if [[ -a /usr/local/bin/virtualenvwrapper.sh ]]
+then
+    source /usr/local/bin/virtualenvwrapper.sh
+fi
+
 alias a="alias"
 alias l="ls -l"
 alias la="ls -laF"
@@ -67,3 +73,6 @@ fi
 
 alias d="docker"
 alias dc="docker-compose"
+alias dremoveall="docker rm $(docker ps -a -q)"
+alias dstopall="docker rm $(docker ps -a -q)"
+
