@@ -73,6 +73,6 @@ fi
 
 alias d="docker"
 alias dc="docker-compose"
-alias dremoveall="docker rm $(docker ps -a -q)"
-alias dstopall="docker rm $(docker ps -a -q)"
+alias dremoveall='docker rm $(docker ps -a -q)'
+alias dstopall='docker rm $(docker ps -a -q)'
 
