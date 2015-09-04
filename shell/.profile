@@ -25,19 +25,11 @@ PS1="\[\033[1;32m\]\u\[\033[1;34m\]@\h \[\033[1;33m\]\w\[\033[1;35m\]\$(parse_gi
 
 ulimit -n 1024
 
-
 unamestr=`uname`
 if [[ "$unamestr" == 'Linux' ]]; then
-    source ~/.dotfile/linux/.profile
+    source ~/.dotfiles/linux/.profile
 elif [[ "$unamestr" == 'Darwin' ]]; then
-    source ~/.dotfile/osx/.profile
-fi
-
-echo $platform
-
-if [[ -a /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl ]]
-then
-    alias subl3="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+    source ~/.dotfiles/osx/.profile
 fi
 
 if [[ -a /usr/local/bin/virtualenvwrapper.sh ]]
@@ -49,7 +41,6 @@ alias a="alias"
 alias l="ls -l"
 alias la="ls -laF"
 alias timestamp="date +%s"
-alias pubkey="cat ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
 alias v="vagrant"
 
 # Git shortcuts
@@ -77,12 +68,7 @@ then
 fi
 
 # Docker
-if [ "$(boot2docker status)" = "running" ] ; then
-    eval "$(boot2docker shellinit)"
-fi
-
 alias d="docker"
 alias dc="docker-compose"
 alias dremoveall='docker rm $(docker ps -a -q)'
 alias dstopall='docker rm $(docker ps -a -q)'
-
