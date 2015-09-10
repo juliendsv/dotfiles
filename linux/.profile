@@ -8,3 +8,8 @@ if [ -x /usr/bin/dircolors ]; then
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
+
+alias d="docker"
+alias dc="docker-compose"
+alias dremoveall='docker rm $(docker ps -a -q)'
+alias dstopall='docker stop $(docker ps -a -q)'

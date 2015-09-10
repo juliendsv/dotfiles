@@ -67,8 +67,3 @@ then
     alias cdgo="cd $GOPATH/src/github.com/$USER"
 fi
 
-# Docker
-alias d="docker"
-alias dc="docker-compose"
-alias dremoveall='docker rm $(docker ps -a -q)'
-alias dstopall='docker stop $(docker ps -a -q)'
