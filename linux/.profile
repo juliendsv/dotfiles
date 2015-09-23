@@ -1,3 +1,5 @@
+export PATH="/usr/local/go/bin:$PATH"
+
 ssh-auth() {
     # Start the SSH agent only if not running
     [[ -z $(ps -A | grep ssh-agent) ]] && echo $(ssh-agent) > /tmp/ssh-agent-data.sh
