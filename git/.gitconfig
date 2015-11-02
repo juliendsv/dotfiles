@@ -2,15 +2,15 @@
     protocol = https
 
 [credential]
-	helper = #CREDENTIAL#
+    helper = #CREDENTIAL#
 
 [core]
-	excludesfile = ~/.gitignore
-	editor = vim
+    excludesfile = ~/.gitignore
+    editor = vim
 
 [user]
-	name = juliendsv
-	email = julien.dasilva@gmail.com
+    name = juliendsv
+    email = julien.dasilva@gmail.com
 
 [color]
     ui = auto
@@ -46,9 +46,9 @@
     pretty-log = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%Creset' --abbrev-commit
 
 [filter "media"]
-	clean = git media clean %f
-	smudge = git media smudge %f
-	required = true
+    clean = git media clean %f
+    smudge = git media smudge %f
+    required = true
 
 [help]
 
