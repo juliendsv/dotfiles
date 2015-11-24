@@ -1,7 +1,5 @@
-# Add `~/bin` to the `$PATH`
-export PATH="$HOME/bin:$PATH";
 export GOPATH="$HOME"
-
+export PATH="$GOPATH/bin:$PATH";
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
