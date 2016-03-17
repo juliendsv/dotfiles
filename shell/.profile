@@ -15,7 +15,7 @@ function parse_git_branch {
  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1]/'
 }
 
-PS1="\[\033[1;32m\]\u\[\033[1;34m\]@\h \[\033[1;33m\]\w\[\033[1;35m\]\$(parse_git_branch)\[\033[00m\] "
+PS1="\[\033[1;32m\]\u\[\033[1;34m\]@\h \[\033[1;33m\]\w\[\033[1;35m\]\$(parse_git_branch)\[\033[00m\]\n$ "
 
 ulimit -n 1024
 
