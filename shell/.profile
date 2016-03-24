@@ -46,6 +46,9 @@ alias gcob="git checkout -b"
 alias git-delete="git push origin --delete"
 alias git-prune="git remote prune origin"
 
+# proto gen
+alias protog="protoc --go_out=. *.proto"
+
 # List Go dependencies of a project excluding standard libs
 alias gdeps="go list -f '{{.Deps}}' | tr \"[\" \" \" | tr \"]\" \" \" | xargs go list -f '{{if not .Standard}}{{.ImportPath}}{{end}}'"
 
@@ -60,4 +63,3 @@ if [[ "$GOPATH" ]];
 then
     alias cdgo="cd $GOPATH/src/github.com/$USER"
 fi
-
