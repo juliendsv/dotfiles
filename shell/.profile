@@ -46,6 +46,11 @@ alias gcob="git checkout -b"
 alias git-delete="git push origin --delete"
 alias git-prune="git remote prune origin"
 
+# Docker
+
+alias dstopall="docker stop $(docker ps -a -q)"
+alias drmall="docker rm $(docker ps -a -q)"
+
 # proto gen
 alias protog="protoc --go_out=. *.proto"
 
