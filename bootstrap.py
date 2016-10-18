@@ -16,11 +16,15 @@ def swap_string_in_file(filename, old_string, new_string):
 
 def install_packages():
 	if platform.system() not in ['Darwin', 'Linux']: 
-		print "What are you doing? don't work with your system ..."
+		print "What are you doing? this doesn't work with your system..."
 		return
 
 	if platform.system() == "Linux":
         	subprocess.call(['./linux/apt.sh'])
+
+	if platform.system() == "Darwin":
+        	subprocess.call(['./osx/brew.sh'])
+
 
 def setup_gitconfig():
 	if os.path.isfile("../.gitconfig"):
@@ -28,7 +32,7 @@ def setup_gitconfig():
 		return
 
 	if platform.system() not in ['Darwin', 'Linux']: 
-		print "What are you doing? don't work with your system ..."
+		print "What are you doing? this doesn't work with your system..."
 		return
 
 	shutil.copyfile("./git/.gitconfig", "../.gitconfig")
